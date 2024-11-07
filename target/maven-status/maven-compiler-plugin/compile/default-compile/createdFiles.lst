@@ -1,0 +1,8 @@
+com\desafio\model\Cliente.class
+com\desafio\dto\EnderecoDTO.class
+com\desafio\repository\ClienteRepository.class
+com\desafio\config\WebConfig.class
+com\desafio\service\ViaCepService.class
+com\desafio\Application.class
+com\desafio\controller\ClienteBean.class
+com\desafio\service\ClienteService.class

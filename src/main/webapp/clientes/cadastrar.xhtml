@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.component.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.component.UI">
+    <h:head>
+        <title>Cadastro de Cliente</title>
+    </h:head>
+    <h:body>
+        <h1>Cadastro de Cliente</h1>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel for="nome" value="Nome: " />
+                <h:inputText id="nome" value="#{clienteBean.cliente.nome}" required="true" />
+
+                <h:outputLabel for="email" value="Email: " />
+                <h:inputText id="email" value="#{clienteBean.cliente.email}" required="true" validatorMessage="Email inválido" />
+
+                <h:outputLabel for="cep" value="CEP: " />
+                <h:inputText id="cep" value="#{clienteBean.cliente.cep}" required="true" />
+
+                <h:outputLabel for="endereco" value="Endereço: " />
+                <h:inputText id="endereco" value="#{clienteBean.cliente.endereco}" required="true" disabled="true"/>
+
+                <h:outputLabel for="bairro" value="Bairro: " />
+                <h:inputText id="bairro" value="#{clienteBean.cliente.bairro}" required="true" disabled="true"/>
+
+                <h:outputLabel for="cidade" value="Cidade: " />
+                <h:inputText id="cidade" value="#{clienteBean.cliente.cidade}" required="true" disabled="true"/>
+
+                <h:outputLabel for="estado" value="Estado: " />
+                <h:inputText id="estado" value="#{clienteBean.cliente.estado}" required="true" disabled="true"/>
+            </h:panelGrid>
+            
+            <h:commandButton value="Consultar Endereço" action="#{clienteBean.consultarEnderecoPorCep}" />
+
+            <h:commandButton value="Salvar" action="#{clienteBean.salvar}" />
+        </h:form>
+    </h:body>
+</html>
