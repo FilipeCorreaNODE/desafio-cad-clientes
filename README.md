@@ -23,11 +23,15 @@ Maven como gerenciador de dependências.
 Estrutura do Projeto
 
 Model: Cliente (Mapeamento da Entidade para o banco de dados com validaçoes dos atributos)
+
 DTO: EnderecoDTO (Classe de mapeamento da resposta do servico VaiCep)
+
 Repository: ClienteRepository (Interface de mapeamento das funcionalidade do JPA para transaçães com o banco)
+
 Service: ViaCepService (Classe de serviço para integração de busca do dados de entreço conforme o CEP informado)
+
 Service: ClienteService (Classe de serviço intermediária entre a persistência do banco de dados/Repository e o controlador)
+
 Controller: ClienteBean (Classe controlador responsável de integrar as funções da interface, JSF no caso, para as validações e cominucações com o repositório/banco)
 
 src/main/webapp/clientes/cadastrar.xhtml e src/main/webapp/clientes/listar.xhtml (Paginas JSF)
-A estrutura do projeto segue a convenção do Spring Boot, com os seguintes diretórios principais:
